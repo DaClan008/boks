@@ -1,5 +1,13 @@
 # boks
 
+[![Build Status](https://travis-ci.org/DaClan008/boks.svg?branch=master)](https://travis-ci.org/DaClan008/boks)
+[![Coverage Status](https://coveralls.io/repos/github/DaClan008/boks/badge.svg?branch=master)](https://coveralls.io/github/DaClan008/boks?branch=master)
+[![codecov](https://codecov.io/gh/DaClan008/boks/branch/master/graph/badge.svg)](https://codecov.io/gh/DaClan008/boks)
+![npm](https://img.shields.io/npm/v/boks)
+![npm](https://img.shields.io/npm/dm/boks)
+![NPM](https://img.shields.io/npm/l/boks)
+![GitHub repo size](https://img.shields.io/github/repo-size/DaClan008/boks?label=gitHub%20repo%20size)
+
 Border or boxes that can be used to wrap text.
 
 Similar to cli-boxes but includes:
