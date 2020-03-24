@@ -4,7 +4,7 @@
     "description": "Border or boxes that can be used to wrap text",
     "main": "index.js",
     "engines": {
-        "node": ">=8.5.0"
+        "node": ">=10.0.0"
     },
     "scripts": {
         "test": "npm run lint && jest",
