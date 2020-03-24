@@ -1,0 +1,103 @@
+{
+  "name": "boks",
+  "version": "0.0.1",
+  "description": "Border or boxes that can be used to wrap text",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.5.0"
+  },
+  "scripts": {
+    "test": "npm run lint && jest",
+    "lint": "eslint src/**/*.ts --fix",
+    "clean": "rimraf ./bin",
+    "prebuild": "npm run clean",
+    "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.d.json && cleandts --mod=index:boks --restrict",
+    "postbuild": "node tools/finalizeBuild && npx prettier bin/**/*.* --write && eslint bin/**/*.js --fix",
+    "prepack": "npm test && npm run build",
+    "pack": "node tools/publish",
+    "postpack": "npm run clean && npm run git",
+    "pregit": "git add -A",
+    "git": "git commit -m \"auto git commit\"",
+    "postgit": "git push",
+    "pub": "node ./tools/publish",
+    "prebuild:quick": "npm run clean && tsc --inlineSourceMap false && node tools/finalizeBuild",
+    "build:quick": "npx prettier bin/**/*.js --write && eslint bin/**/*.js --fix",
+    "me": "tsc -p tsconfig.d.json && node tools/declarationFix.js ./bin/index.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaClan008/boks.git"
+  },
+  "keywords": [
+    "box",
+    "boxes",
+    "commandline",
+    "cli",
+    "border",
+    "borders",
+    "unicode"
+  ],
+  "author": "Jan Lehmkuhl <DaClan008@users.noreply.github.com> (http://somewhere.com/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/DaClan008/boks/issues"
+  },
+  "homepage": "https://github.com/DaClan008/boks#readme",
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "coveragePathIgnorePatterns": [
+      "./node_modules",
+      "./coverage",
+      "./.vscode",
+      "./__test__",
+      "./tools"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    },
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.3",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "clean-dts": "^1.1.0",
+    "codecov": "^3.6.5",
+    "coveralls": "^3.0.11",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "prettier": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "through2": "^3.0.1",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
+  }
+}
