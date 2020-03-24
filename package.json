@@ -1,6 +1,6 @@
 {
     "name": "boks",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Border or boxes that can be used to wrap text",
     "main": "index.js",
     "engines": {
