@@ -1,6 +1,6 @@
 {
     "name": "boks",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Border or boxes that can be used to wrap text",
     "main": "index.js",
     "engines": {
@@ -11,7 +11,7 @@
         "lint": "eslint src/**/*.ts --fix",
         "clean": "rimraf ./bin",
         "prebuild": "npm run clean",
-        "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.d.json && cleandts --mod=index:boks --restrict",
+        "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.d.json && cleandts --mod=index: --restrict",
         "postbuild": "node tools/finalizeBuild && npx prettier bin/**/*.* --write && eslint bin/**/*.js --fix",
         "prepack": "npm test && npm run build",
         "pack": "node tools/publish",
