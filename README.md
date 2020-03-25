@@ -103,5 +103,9 @@ Any contributions are welcome.
 
 ## Patches
 
+-   **1.0.3**
+
+    -   update the d.ts file.
+
 -   **1.0.1**
     -   update the node version from >=8.5.0 to >=10.0.0.
