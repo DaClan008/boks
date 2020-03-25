@@ -1,6 +1,6 @@
 {
     "name": "boks",
-    "version": "1.0.2",
+    "version": "1.0.1",
     "description": "Border or boxes that can be used to wrap text",
     "main": "index.js",
     "engines": {
@@ -79,10 +79,10 @@
     },
     "devDependencies": {
         "@types/jest": "^25.1.4",
-        "@types/node": "^13.9.3",
+        "@types/node": "^13.9.4",
         "@typescript-eslint/eslint-plugin": "^2.25.0",
         "@typescript-eslint/parser": "^2.25.0",
-        "clean-dts": "^1.1.0",
+        "clean-dts": "^1.1.1",
         "codecov": "^3.6.5",
         "coveralls": "^3.0.11",
         "eslint": "^6.8.0",
